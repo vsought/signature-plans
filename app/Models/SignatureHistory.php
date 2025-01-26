@@ -22,4 +22,8 @@ class SignatureHistory extends Model
     protected $casts = [
         'old_status' => SignatureStatus::class
     ];
+
+    public function signature() {
+        return $this->belongsTo(Signature::class);
+    }
 }
